@@ -322,9 +322,15 @@ img {
 }
 
 .home__description{
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   margin-bottom: var(--mb-2);
+  width: 80%; /* Adjust the width as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+.home__title, .home__subtitle, .home__description {
+  margin-left: 20px; /* or any value that suits your design */
+  text-align: left;
 }
 
 .home__scroll{
@@ -926,6 +932,10 @@ img {
   font-size: var(--medium-font-size);
   margin-bottom: .1rem;
 }
+.hidden {
+  display: none;
+}
+
 
 /*==================== MEETING ====================*/
 
@@ -1291,15 +1301,21 @@ img {
   }
 
   .about__container{
-    column-gap: 5rem;
+    display: flex;
+    align-items: center; /* This will vertically align the items in the container */
+    column-gap: 5rem;  
   }
 
   .about__img{
-    width: 350px;
+    width: 100%; /* or a specific width, depending on your layout */
+    max-width: 350px;
+    flex-grow: 1; 
   }
 
   .about__description{
-    text-align: justify;
+ 
+    margin-left: 20px;
+    text-align: left;
   }
 
   .about__info{
@@ -1307,9 +1323,13 @@ img {
   }
 
   .about__buttons{
+    padding-top: 1.8rem;
     justify-content: initial;
   }
-
+  .about__img, .about__description {
+    margin: 0;
+    padding: 2;
+}
   .qualification__tabs{
     justify-content: center;
   }
